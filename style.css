@@ -10,3 +10,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  color: #fff;
+  background-color: var(--bg);
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
