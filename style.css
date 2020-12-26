@@ -28,6 +28,9 @@ header {
   width: 100%;
   background-color: var(--bg);
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .nav {
@@ -46,6 +49,7 @@ header {
   border: 1px solid #fff;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  z-index: 1500;
 }
 
 .logo:hover {
@@ -53,8 +57,7 @@ header {
   color: var(--gray);
 }
 
-.fa-bars,
-.fa-times {
+.mobile-nav {
   display: none;
 }
 
@@ -89,4 +92,48 @@ header {
 
 .active {
   font-weight: 700;
+}
+
+@media screen and (max-width: 720px) {
+  .mobile-nav {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1500;
+  }
+  .fa-times {
+    display: none;
+  }
+  .open-nav.fa-times {
+    display: block;
+    z-index: 1500;
+  }
+  .open-nav.fa-bars {
+    display: none;
+  }
+  .open-nav.nav-items {
+    transform: translateX(0);
+  }
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1400;
+    transform: translateX(120%);
+    transition: all 0.5s;
+  }
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+  .nav-item:last-child {
+    margin-bottom: 0;
+  }
 }
