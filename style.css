@@ -270,3 +270,46 @@ header {
 .link:hover {
   color: #fff;
 }
+
+@media screen and (max-width: 720px) {
+  .flex {
+    flex-direction: column;
+  }
+  .content {
+    flex: initial;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    width: 80%;
+    align-self: flex-start;
+  }
+  .title {
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 25px;
+  }
+  .subtitle {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 25px;
+  }
+  .image {
+    margin-left: 0;
+    height: 100%;
+  }
+  .bottom {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 504px) {
+  .profile {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 398px) {
+  .profile {
+    bottom: -90px;
+    right: 20px;
+  }
+}
